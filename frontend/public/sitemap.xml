@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Home Page -->
-  <url>
-    <loc>https://adminhub.example.com/</loc>
-    <lastmod>2025-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+    <!-- Home Page -->
+    <url>
+        <loc>https://adminhub.example.com/</loc>
+        <lastmod>2025-07-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
 
-  <!-- Login Page -->
-  <url>
-    <loc>https://adminhub.example.com/login</loc>
-    <lastmod>2025-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+    <!-- Login Page -->
+    <url>
+        <loc>https://adminhub.example.com/login</loc>
+        <lastmod>2025-07-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <!-- Register Page -->
-  <url>
-    <loc>https://adminhub.example.com/register</loc>
-    <lastmod>2025-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+    <!-- Register Page -->
+    <url>
+        <loc>https://adminhub.example.com/register</loc>
+        <lastmod>2025-07-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <!-- Note: Dashboard and Users pages are excluded as they require authentication -->
-  <!-- and contain sensitive information that shouldn't be indexed by search engines -->
+    <!-- Note: Dashboard and Users pages are excluded as they require authentication -->
+    <!-- and contain sensitive information that shouldn't be indexed by search engines -->
 
 </urlset>

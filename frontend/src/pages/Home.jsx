@@ -36,106 +36,108 @@ export default function Home() {
                 Manage your users, data, and applications with ease and style.
               </p>
 
-            {user ? (
-              <div className="space-y-4">
-                <p className="text-lg text-white/80">
-                  Welcome back,{" "}
-                  <span className="font-semibold">{user.name}</span>! You are
-                  logged in as{" "}
-                  <span className="font-semibold capitalize">{user.role}</span>
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button
-                    variant="accent"
-                    size="lg"
-                    className="bg-white text-emerald-600 hover:bg-gray-100"
-                    onClick={() => (window.location.href = "/dashboard")}
-                  >
-                    <FiTrendingUp className="w-5 h-5 mr-2" />
-                    Go to Dashboard
-                  </Button>
-                  {user.role === "admin" && (
-                    <Button
-                      variant="outline"
-                      size="lg"
-                      className="border-white text-white hover:bg-white/10"
-                      onClick={() => (window.location.href = "/users")}
-                    >
-                      <FiUsers className="w-5 h-5 mr-2" />
-                      Manage Users
-                    </Button>
-                  )}
-                </div>
-              </div>
-            ) : (
-              <div className="space-y-4">
-                <p className="text-lg text-white/80">
-                  Get started by creating an account or logging in to access the
-                  dashboard
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link to="/register">
+              {user ? (
+                <div className="space-y-4">
+                  <p className="text-lg text-white/80">
+                    Welcome back,{" "}
+                    <span className="font-semibold">{user.name}</span>! You are
+                    logged in as{" "}
+                    <span className="font-semibold capitalize">
+                      {user.role}
+                    </span>
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button
                       variant="accent"
                       size="lg"
-                      className="bg-white text-emerald-600 hover:bg-gray-100 w-full sm:w-auto"
+                      className="bg-white text-emerald-600 hover:bg-gray-100"
+                      onClick={() => (window.location.href = "/dashboard")}
                     >
-                      Get Started
-                      <FiArrowRight className="w-5 h-5 ml-2" />
+                      <FiTrendingUp className="w-5 h-5 mr-2" />
+                      Go to Dashboard
                     </Button>
-                  </Link>
-                  <Link to="/login">
-                    <Button
-                      variant="outline"
-                      size="lg"
-                      className="border-white text-white hover:bg-white/10 w-full sm:w-auto"
-                    >
-                      Sign In
-                    </Button>
-                  </Link>
+                    {user.role === "admin" && (
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="border-white text-white hover:bg-white/10"
+                        onClick={() => (window.location.href = "/users")}
+                      >
+                        <FiUsers className="w-5 h-5 mr-2" />
+                        Manage Users
+                      </Button>
+                    )}
+                  </div>
                 </div>
-              </div>
-            )}
+              ) : (
+                <div className="space-y-4">
+                  <p className="text-lg text-white/80">
+                    Get started by creating an account or logging in to access
+                    the dashboard
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Link to="/register">
+                      <Button
+                        variant="accent"
+                        size="lg"
+                        className="bg-white text-emerald-600 hover:bg-gray-100 w-full sm:w-auto"
+                      >
+                        Get Started
+                        <FiArrowRight className="w-5 h-5 ml-2" />
+                      </Button>
+                    </Link>
+                    <Link to="/login">
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="border-white text-white hover:bg-white/10 w-full sm:w-auto"
+                      >
+                        Sign In
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
-        </div>
         </section>
 
-      {/* Stats Section */}
-      <section>
-        <h2 className="sr-only">AdminHub Statistics</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="text-center">
-            <CardBody className="p-6">
-              <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
-                <FiUsers className="w-6 h-6 text-white" aria-hidden="true" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900">1000+</h3>
-              <p className="text-gray-600">Active Users</p>
-            </CardBody>
-          </Card>
-          
-          <Card className="text-center">
-            <CardBody className="p-6">
-              <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-violet-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <FiGlobe className="w-6 h-6 text-white" aria-hidden="true" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900">50+</h3>
-              <p className="text-gray-600">Countries</p>
-            </CardBody>
-          </Card>
-          
-          <Card className="text-center">
-            <CardBody className="p-6">
-              <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-rose-500 to-pink-600 rounded-lg flex items-center justify-center">
-                <FiZap className="w-6 h-6 text-white" aria-hidden="true" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900">99.9%</h3>
-              <p className="text-gray-600">Uptime</p>
-            </CardBody>
-          </Card>
-        </div>
-      </section>
-    </div>
+        {/* Stats Section */}
+        <section>
+          <h2 className="sr-only">AdminHub Statistics</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card className="text-center">
+              <CardBody className="p-6">
+                <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
+                  <FiUsers className="w-6 h-6 text-white" aria-hidden="true" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">1000+</h3>
+                <p className="text-gray-600">Active Users</p>
+              </CardBody>
+            </Card>
+
+            <Card className="text-center">
+              <CardBody className="p-6">
+                <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-violet-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <FiGlobe className="w-6 h-6 text-white" aria-hidden="true" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">50+</h3>
+                <p className="text-gray-600">Countries</p>
+              </CardBody>
+            </Card>
+
+            <Card className="text-center">
+              <CardBody className="p-6">
+                <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-rose-500 to-pink-600 rounded-lg flex items-center justify-center">
+                  <FiZap className="w-6 h-6 text-white" aria-hidden="true" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">99.9%</h3>
+                <p className="text-gray-600">Uptime</p>
+              </CardBody>
+            </Card>
+          </div>
+        </section>
+      </div>
     </>
   );
 }
