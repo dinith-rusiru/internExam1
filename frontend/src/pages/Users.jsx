@@ -98,7 +98,7 @@ export default function Users() {
   return (
     <div className="space-y-6">
       {/* Header Section */}
-      <div className="bg-gradient-to-r from-primary-600 via-secondary-600 to-accent-600 rounded-2xl p-8 text-white">
+      <div className="bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 rounded-2xl p-8 text-white">
         <div className="flex items-center space-x-3 mb-4">
           <div className="p-3 bg-white/20 rounded-xl">
             <FiUsers className="w-8 h-8" />
@@ -160,7 +160,7 @@ export default function Users() {
                 placeholder="Search users..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="block w-full sm:w-80 pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                className="block w-full sm:w-80 pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
               />
             </div>
           </div>
@@ -197,14 +197,14 @@ export default function Users() {
                     key={userItem._id}
                     className={`hover:bg-gray-50 transition-colors ${
                       userItem._id === user?._id
-                        ? "bg-gradient-to-r from-primary-50 to-secondary-50"
+                        ? "bg-gradient-to-r from-emerald-50 to-teal-50"
                         : ""
                     }`}
                   >
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
                         <div className="flex-shrink-0 h-10 w-10">
-                          <div className="h-10 w-10 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center">
+                          <div className="h-10 w-10 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center">
                             <span className="text-white font-medium text-sm">
                               {userItem.name.charAt(0).toUpperCase()}
                             </span>
@@ -216,7 +216,7 @@ export default function Users() {
                               {userItem.name}
                             </div>
                             {userItem._id === user?._id && (
-                              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-800">
+                              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
                                 You
                               </span>
                             )}
@@ -233,9 +233,9 @@ export default function Users() {
                         onChange={(e) =>
                           handleRoleChange(userItem._id, e.target.value)
                         }
-                        className={`px-3 py-1 rounded-lg text-sm font-medium border-0 focus:ring-2 focus:ring-primary-500 ${
+                        className={`px-3 py-1 rounded-lg text-sm font-medium border-0 focus:ring-2 focus:ring-emerald-500 ${
                           userItem.role === "admin"
-                            ? "bg-gradient-to-r from-success-100 to-success-200 text-success-800"
+                            ? "bg-gradient-to-r from-emerald-100 to-teal-200 text-emerald-800"
                             : "bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800"
                         }`}
                         disabled={userItem._id === user?._id}

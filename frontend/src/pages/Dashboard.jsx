@@ -21,8 +21,8 @@ export default function Dashboard() {
       label: "Active Sessions",
       value: "1",
       icon: FiActivity,
-      color: "from-primary-500 to-primary-600",
-      bgColor: "from-primary-50 to-primary-100",
+      color: "from-emerald-500 to-teal-600",
+      bgColor: "from-emerald-50 to-teal-100",
     },
     {
       label: "Account Age",
@@ -32,29 +32,29 @@ export default function Dashboard() {
             (1000 * 60 * 60 * 24)
         ) + " days",
       icon: FiClock,
-      color: "from-secondary-500 to-secondary-600",
-      bgColor: "from-secondary-50 to-secondary-100",
+      color: "from-violet-500 to-purple-600",
+      bgColor: "from-violet-50 to-purple-100",
     },
     {
       label: "Permission Level",
       value: user?.role === "admin" ? "Full Access" : "Limited Access",
       icon: FiShield,
-      color: "from-accent-500 to-accent-600",
-      bgColor: "from-accent-50 to-accent-100",
+      color: "from-rose-500 to-pink-600",
+      bgColor: "from-rose-50 to-pink-100",
     },
     {
       label: "Status",
       value: "Active",
       icon: FiTrendingUp,
-      color: "from-success-500 to-success-600",
-      bgColor: "from-success-50 to-success-100",
+      color: "from-cyan-500 to-blue-600",
+      bgColor: "from-cyan-50 to-blue-100",
     },
   ];
 
   return (
     <div className="space-y-6">
       {/* Welcome Header */}
-      <div className="bg-gradient-to-r from-primary-600 via-secondary-600 to-accent-600 rounded-2xl p-8 text-white">
+      <div className="bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 rounded-2xl p-8 text-white">
         <div className="flex flex-col md:flex-row md:items-center justify-between">
           <div className="flex items-center space-x-4">
             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
@@ -120,8 +120,8 @@ export default function Dashboard() {
           </CardHeader>
           <CardBody className="space-y-4">
             <div className="flex items-center space-x-3 p-4 bg-white/60 rounded-lg">
-              <div className="p-2 bg-primary-100 rounded-lg">
-                <FiUser className="w-5 h-5 text-primary-600" />
+              <div className="p-2 bg-emerald-100 rounded-lg">
+                <FiUser className="w-5 h-5 text-emerald-600" />
               </div>
               <div>
                 <p className="text-sm text-gray-600">Full Name</p>
@@ -130,8 +130,8 @@ export default function Dashboard() {
             </div>
 
             <div className="flex items-center space-x-3 p-4 bg-white/60 rounded-lg">
-              <div className="p-2 bg-secondary-100 rounded-lg">
-                <FiMail className="w-5 h-5 text-secondary-600" />
+              <div className="p-2 bg-violet-100 rounded-lg">
+                <FiMail className="w-5 h-5 text-violet-600" />
               </div>
               <div>
                 <p className="text-sm text-gray-600">Email Address</p>
@@ -140,8 +140,8 @@ export default function Dashboard() {
             </div>
 
             <div className="flex items-center space-x-3 p-4 bg-white/60 rounded-lg">
-              <div className="p-2 bg-accent-100 rounded-lg">
-                <FiShield className="w-5 h-5 text-accent-600" />
+              <div className="p-2 bg-rose-100 rounded-lg">
+                <FiShield className="w-5 h-5 text-rose-600" />
               </div>
               <div>
                 <p className="text-sm text-gray-600">Account Role</p>
@@ -152,7 +152,7 @@ export default function Dashboard() {
                   <span
                     className={`px-2 py-1 rounded-full text-xs font-medium ${
                       user?.role === "admin"
-                        ? "bg-success-100 text-success-800"
+                        ? "bg-emerald-100 text-emerald-800"
                         : "bg-gray-100 text-gray-800"
                     }`}
                   >
@@ -163,8 +163,8 @@ export default function Dashboard() {
             </div>
 
             <div className="flex items-center space-x-3 p-4 bg-white/60 rounded-lg">
-              <div className="p-2 bg-success-100 rounded-lg">
-                <FiClock className="w-5 h-5 text-success-600" />
+              <div className="p-2 bg-cyan-100 rounded-lg">
+                <FiClock className="w-5 h-5 text-cyan-600" />
               </div>
               <div>
                 <p className="text-sm text-gray-600">Member Since</p>
@@ -229,12 +229,12 @@ export default function Dashboard() {
               </h3>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-sm">
-                  <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
                   <span className="text-gray-600">Logged in to dashboard</span>
                   <span className="text-gray-400 ml-auto">Now</span>
                 </div>
                 <div className="flex items-center space-x-3 text-sm">
-                  <div className="w-2 h-2 bg-success-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
                   <span className="text-gray-600">Account created</span>
                   <span className="text-gray-400 ml-auto">
                     {user?.createdAt
