@@ -12,6 +12,7 @@ import {
 } from "react-icons/fi";
 import Card, { CardHeader, CardBody } from "../components/ui/Card";
 import Button from "../components/ui/Button";
+import SEOHead, { SEOConfigs } from "../components/SEO/SEOHead";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -39,7 +40,9 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-[calc(100vh-200px)] flex items-center justify-center">
+    <>
+      <SEOHead {...SEOConfigs.login} />
+      <div className="min-h-[calc(100vh-200px)] flex items-center justify-center">
       <div className="w-full max-w-md">
         {/* Logo Section */}
         <div className="text-center mb-8">
@@ -196,5 +199,6 @@ export default function Login() {
         </div>
       </div>
     </div>
+    </>
   );
 }

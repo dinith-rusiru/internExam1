@@ -1,0 +1,21 @@
+# robots.txt for AdminHub
+
+User-agent: *
+Allow: /
+
+# Disallow admin-specific areas that shouldn't be indexed
+Disallow: /dashboard
+Disallow: /users
+Disallow: /admin
+Disallow: /api/
+Disallow: /login
+Disallow: /register
+
+# Allow home page and public content
+Allow: /
+
+# Sitemap location
+Sitemap: https://adminhub.example.com/sitemap.xml
+
+# Crawl delay (optional - helps prevent server overload)
+Crawl-delay: 1
