@@ -37,6 +37,7 @@ export const authService = {
 export const userService = {
   getUsers: () => api.get('/api/users'),
   updateUser: (id, userData) => api.put(`/api/users/${id}`, userData),
+  deleteUser: (id) => api.delete(`/api/users/${id}`),
 };
 
 export default api;
