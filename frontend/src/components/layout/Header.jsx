@@ -16,14 +16,14 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gradient-to-r from-primary-600 via-secondary-600 to-accent-600 shadow-lg sticky top-0 z-50">
+    <header className="bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <FiGrid className="w-5 h-5 text-primary-600" />
+                <FiGrid className="w-5 h-5 text-emerald-600" />
               </div>
               <span className="text-xl font-bold text-white">AdminHub</span>
             </Link>
@@ -79,7 +79,7 @@ export default function Header() {
                         {user.name}
                       </p>
                       <p className="text-xs text-gray-500">{user.email}</p>
-                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-primary-100 text-primary-800 mt-1">
+                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 mt-1">
                         {user.role}
                       </span>
                     </div>
@@ -103,7 +103,7 @@ export default function Header() {
                 </Link>
                 <Link
                   to="/register"
-                  className="px-4 py-2 bg-white text-primary-600 rounded-lg hover:bg-gray-100 transition-colors font-medium"
+                  className="px-4 py-2 bg-white text-emerald-600 rounded-lg hover:bg-gray-100 transition-colors font-medium"
                 >
                   Register
                 </Link>
